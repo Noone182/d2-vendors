@@ -6,8 +6,12 @@
 </template>
 
 <script>
+import Background from "@/components/Background.vue";
 export default {
-  name: "Titan"
+  name: "Titan",
+  components: {
+    Background
+  }
 };
 </script>
 

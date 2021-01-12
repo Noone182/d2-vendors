@@ -1,20 +1,17 @@
 <template>
   <div class="hunter">
     <background />
-    <router-link to="warlock">
-      <object
-        :data="require('../assets/warlock_emblem.svg')"
-        type="image/svg+xml"
-        width="150"
-        height="150"
-      ></object>
-    </router-link>
+    <router-link to="/">Hunter</router-link>
   </div>
 </template>
 
 <script>
+import Background from "@/components/Background.vue";
 export default {
-  name: "Hunter"
+  name: "Hunter",
+  components: {
+    Background
+  }
 };
 </script>
 

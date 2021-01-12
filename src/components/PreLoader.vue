@@ -1,6 +1,6 @@
 <template>
   <div class="pre-loader">
-    <img :src="require('../assets/logo.png')" :class="preLoaderClass" />
+    <img :src="require('../assets/logo.png')" :class="preLoaderClass" alt="" />
   </div>
 </template>
 
@@ -17,10 +17,7 @@ export default {
       let vm = this;
       setTimeout(function() {
         vm.preLoaderClass = "scale-out-center";
-      }, 3900);
-      setTimeout(function() {
-        vm.preLoaderClass = "destroy";
-      }, 5000);
+      }, 3800);
     }
   },
   mounted() {
@@ -34,7 +31,7 @@ export default {
   display: none;
 }
 .scale-out-center {
-  animation: scale-out-center 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   width: 10vw;
 }
 @keyframes scale-out-center {

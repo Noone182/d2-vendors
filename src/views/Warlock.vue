@@ -2,14 +2,6 @@
   <div class="warlock">
     <background />
     Warlock
-    <router-link to="warlock">
-      <object
-        :data="require('../assets/warlock_emblem.svg')"
-        type="image/svg+xml"
-        width="150"
-        height="150"
-      ></object>
-    </router-link>
   </div>
 </template>
 
