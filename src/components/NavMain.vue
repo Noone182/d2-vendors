@@ -1,5 +1,5 @@
 <template>
-  <div class="link-classes">
+  <div class="link-classes" :class="linkLeave">
     <router-link to="/warlock">
       <img
         class="link-icon"
@@ -14,6 +14,7 @@
         alt=""
       />
     </router-link>
+
     <router-link to="/titan">
       <img
         class="link-icon"
