@@ -1,11 +1,6 @@
 <template>
   <div class="preloader">
-    <img
-      :src="require('../assets/logo.png')"
-      class="preloader-img"
-      :class="preLoaderClass"
-      alt=""
-    />
+    <img src="../assets/logo.png" class="preloader-img" :class="preLoaderClass" alt="" />
   </div>
 </template>
 
@@ -18,15 +13,19 @@ export default {
     };
   },
   methods: {
-    preLoadAway: function() {
-      let vm = this;
-      setTimeout(function() {
-        vm.preLoaderClass = "scale-out-center";
+    preLoadAway() {
+      setTimeout(() => {
+        this.preLoaderClass = "scale-out-center";
       }, 3900);
     }
   },
   mounted() {
-    this.preLoadAway();
+    if (localStorage.getItem('authorization')) {
+      this.preLoadAway()
+    } else {
+      this.preLoaderClass = "scale-out-center";
+    }
+
   }
 };
 </script>

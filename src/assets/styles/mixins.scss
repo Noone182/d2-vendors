@@ -1,0 +1,37 @@
+@mixin desktop() {
+  @media screen and (max-width: 1920px) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin laptop-mini() {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin tablet() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile() {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin no-hover() {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin hover() {
+  @media screen and (min-width: 769px) {
+    &:hover {
+      @content;
+    }
+  }
+}

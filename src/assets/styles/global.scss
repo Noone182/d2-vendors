@@ -1,0 +1,72 @@
+@import "mixins.scss";
+@import "/node_modules/normalize.css/normalize";
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #0e0e0e;
+	position: relative;
+}
+
+#app {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	height: 100%;
+}
+.scale-out-center {
+	animation: scale-out-center 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes scale-out-center {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(0);
+		opacity: 1;
+	}
+}
+
+.pulsate-fwd {
+	animation: pulsate-fwd 2s ease-in-out both;
+	animation-iteration-count: 2;
+}
+
+@keyframes pulsate-fwd {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.scale-in-center {
+	animation: scale-in-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-center {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
