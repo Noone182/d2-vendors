@@ -20,13 +20,13 @@ export default {
     return { isDestroyed: false };
   },
 
-  async mounted() {
-    function timeout(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-    await timeout(5000);
-    this.isDestroyed = true;
-  }
+  // async mounted() {
+  //   function timeout(ms) {
+  //     return new Promise(resolve => setTimeout(resolve, ms));
+  //   }
+  //   await timeout(5000);
+  //   this.isDestroyed = true;
+  // }
 };
 </script>
 

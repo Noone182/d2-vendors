@@ -1,12 +1,16 @@
 <template>
   <div class="preloader">
-    <img src="../assets/logo.png" class="preloader-img" :class="preLoaderClass" alt="" />
+    <v-logo class="preloader-img" :class="preLoaderClass" />
   </div>
 </template>
 
 <script>
+import vLogo from '@/assets/logo.svg?component'
 export default {
   name: "PreLoader",
+  components: {
+    vLogo
+  },
   data() {
     return {
       preLoaderClass: "pulsate-fwd"
@@ -19,19 +23,21 @@ export default {
       }, 3900);
     }
   },
-  mounted() {
-    if (localStorage.getItem('authorization')) {
-      this.preLoadAway()
-    } else {
-      this.preLoaderClass = "scale-out-center";
-    }
+  // mounted() {
+  //   if (localStorage.getItem('authorization')) {
+  //     this.preLoadAway()
+  //   } else {
+  //     this.preLoaderClass = "scale-out-center";
+  //   }
 
-  }
+  // }
 };
 </script>
 
 <style lang="scss">
 .preloader-img {
-  width: 10vw;
+  width: 20vw;
+  height: 20vh;
+  fill: white;
 }
 </style>
